@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font-awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind & daigy  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="capitalize box-border">
+    <header class="bg-blue-100">
+      <div class="flex justify-between items-center shadow-sm px-20 py-4">
+        <div class="">
+          <a href="#" class="flex items-center justify-center font-bold text-xl"
+            >English
+            <span><img src="./assets/logo.png" alt="" /></span>janala</a
+          >
+        </div>
+        <div class="">
+          <button class="btn text-blue-600 border border-blue-500">fAQ</button>
+          <button class="btn text-blue-600 border border-blue-500">
+            learn
+          </button>
+          <button class="btn text-blue-600 border border-blue-500">
+            logout
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- header don -->
+    <section class="flex justify-between items-center px-20 py-4">
+      <div>
+        <h1 class="text-4xl font-bold">
+          <span class="text-sky-500">english</span> is easy
+        </h1>
+        <p class="px-3.5 py-4">
+          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+          অন্য একটি Level এ
+        </p>
+        <div
+          class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4"
+        >
+          <label class="label">name</label>
+          <input type="text" class="input" placeholder="Name" id="input" />
+
+          <label class="label">Password</label>
+          <input
+            type="password"
+            class="input"
+            placeholder="1234"
+            id="password"
+          />
+
+          <button class="btn btn-neutral mt-4" id="btn">Login</button>
+        </div>
+      </div>
+      <div class="">
+        <img src="./assets/hero-student.png" alt="" />
+      </div>
+    </section>
+    <!-- btn  -->
+    <section>
+      <h1 class="text-4xl font-bold text-center">
+        <span class="text-sky-500">Let's</span> Learn Vocabularies
+      </h1>
+      <div
+        id="label-container"
+        class="flex flex-wrap gap-5 justify-center py-2"
+      ></div>
+    </section>
+
+    <section
+      class="bg-gray-100 p-10 max-w-10/12 mx-auto my-8 grid grid-cols-3 gap-5"
+      id="word-container"
+    >
+     
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

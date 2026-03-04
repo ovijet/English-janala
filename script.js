@@ -29,16 +29,42 @@ let lodeLabel = (id) => {
     .then((btn) => btn.json())
     .then((re) => displayLabel(re.data));
 };
+
+// icon lode
+
+// let load = (id) => {
+//   let url = `https://openapi.programming-hero.com/api/words/${id}`;
+
+//   fetch(url)
+//     .then((rr) => rr.json())
+//     .then((dd) => dis(dd.id));
+// };
+// let dis = (xx) => {
+//   xx.forEach((item) => {
+//     console.log(item);
+//   });
+// };
+
 let displayLabel = (event) => {
   let wordContainer = document.getElementById("word-container");
-  wordContainer.innerHTML=''
-//   "id": 4,
-// "level": 5,
-// "word": "Diligent",
-// "meaning": "পরিশ্রমী",
-// "pronunciation": "ডিলিজেন্ট"
+  wordContainer.innerHTML = "";
+  if (event.length == 0) {
+    wordContainer.innerHTML = `
+
+  <div class="text-center col-span-full py-3.5 space-y-2">
+      <p class='text-sm font-bold'>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+      <h1 class="text-3xl font-bold">নেক্সট Lesson এ যান</h1>
+    </div>
+  
+  `;
+  }
+  //   "id": 4,
+  // "level": 5,
+  // "word": "Diligent",
+  // "meaning": "পরিশ্রমী",
+  // "pronunciation": "ডিলিজেন্ট"
   event.forEach((event) => {
-    console.log(event);
+    // console.log(event);
     let div = document.createElement("div");
     div.innerHTML = `
       <div class="bg-white px-2.5 py-7 text-center rounded-lg space-y-3">
@@ -46,7 +72,7 @@ let displayLabel = (event) => {
         <p>Meaning /Pronounciation</p>
         <p class="text-xl font-bold">"${event.meaning} / ${event.pronunciation}"</p>
         <div class="flex justify-between items-center">
-          <button class="btn bg-[#1A91FF10]"><i class="fa-solid fa-info"></i></button>
+          <button class="btn bg-[#1A91FF10]" onclick="load(${event.id})"><i class="fa-solid fa-info"></i></button>
           <button class="btn bg-[#1A91FF10]"><i class="fa-solid fa-m"></i></button>
         </div>
       </div>
